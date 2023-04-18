@@ -1,33 +1,53 @@
 // incluir biblioteca iostream
 #include <iostream>
 // incluir a biblioteca math.h
-#include <math.h>
+#include <cmath>
 // incluir a biblioteca padrao
 using namespace std;
 
+//criar uma classe
+class Triangulo {
+private:
+    double a, b, c;
+public:
+//suar caracteristicas
+    Triangulo(double lado1, double lado2, double lado3) {
+        a = lado1;
+        b = lado2;
+        c = lado3; 
+    }
+
 // dar o calculo para o programa
-double calcularAreaTriangulo(double a, double b, double c) {
-    double p = (a + b + c)/ 2;
-    return sqrt(p * (p + a) * (p + a) * (p + c));
-}
+    double calcularArea() {
+       double p = (a + b + c)/ 2;
+       double area(p * (p - a) * (p - a) * (p - c));
+       return area;
+    }
+    double getLado1() { return a; }
+    double getLado2() { return b; }
+    double getLado3() { return c; }
+};
+    
 
 // iniciamento do programa com delcaracao de variavel
 int main() {
-    double xa, xb, xc, ya, yb, yc;
+    double a, b, c;
     
     // interface de usuario
     cout << "Digite as medidas dos lados do triangulo X (separados por espaco): ";
     // leitura do valor dado
-    cin >> xa >> xb >> xc;
+    cin >> a >> b >> c;
+    Triangulo X(a, b, c);
     
     // interface de usuario
     cout << "Digite as mesdidas dos lados do triangulo Y (separados por espaco): ";
     // leitura do valor dado
-    cin >> ya >> yb >> yc;
+    cin >> a >> b >> c;
+    Triangulo Y(a, b, c);
     
     // calcular com os valores dados
-    double areaX = calcularAreaTriangulo(xa, xb, xc);
-    double areaY = calcularAreaTriangulo(ya, yb, yc);
+    double areaX = X.calcularArea();
+    double areaY = Y.calcularArea();
     
     // dar o resultado a interface de usuario
     cout << "a area do triangulo X: " << areaX << endl;
