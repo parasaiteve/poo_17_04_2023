@@ -10,7 +10,7 @@ class Triangulo {
 private:
     double a, b, c;
 public:
-//suar caracteristicas
+//suas caracteristicas
     Triangulo(double lado1, double lado2, double lado3) {
         a = lado1;
         b = lado2;
