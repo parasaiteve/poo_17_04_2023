@@ -64,6 +64,6 @@ int main() {
         // ou quando as areas forem iguais
         cout << "os triangulos tem a mesma area" << endl;
     }
-    
+    //fechamento do programa
     return 0;
 }
