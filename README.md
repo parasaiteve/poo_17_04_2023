@@ -1,5 +1,5 @@
 # area do triangulo
 # versao 1.0
 # status ⚠️ espera
-#topicos
+# topicos
 🔹 cógido em c++ sobre a area do triangulo
